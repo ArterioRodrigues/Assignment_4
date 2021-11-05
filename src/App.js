@@ -36,8 +36,7 @@ class App extends Component {
       
       <Router>
         <Switch>
-          <h1> hello world </h1>
-          <Route component = {HomeComponent}/>
+          <Route exact path= "http://ArterioRodrigues.github.io/Assignment_4" component = {HomeComponent}/>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LogInComponent}/>
         </Switch>
