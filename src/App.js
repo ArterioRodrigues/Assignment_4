@@ -37,8 +37,7 @@ class App extends Component {
       
       <Router>
         <Switch>
-          <Link to='components/Home.js'> Return to Home </Link>
-          <Route exact path= "/" component = {HomeComponent}/>
+          <Route exact path= "/" component = {HomeComponent}> YO </Route>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LogInComponent}/>
         </Switch>
