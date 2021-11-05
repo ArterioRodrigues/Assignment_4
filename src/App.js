@@ -35,13 +35,7 @@ class App extends Component {
 
     return (
       
-      <Router>
-        <Switch>
-          <Route exact path= "/" component = {HomeComponent}> YO </Route>
-          <Route exact path='/userProfile' render={UserProfileComponent}/>
-          <Route exact path='/login' render={LogInComponent}/>
-        </Switch>
-      </Router>
+      <h1>Hello world </h1>
     );
   }
 }
