@@ -27,6 +27,11 @@ class App extends Component {
 
   render() {
 
+    const HomeComponent = () => (<Home accountBalance = {this.state.accountBalance}/>);
+    const UserProfileComponent = () => ( 
+      <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>
+      );
+    const LogInComponent = () => (<LogIn user = {this.state.currentUser} mockLogIn={this.mockLogIn}/>)
 
     return (
       
