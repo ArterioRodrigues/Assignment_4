@@ -35,7 +35,15 @@ class App extends Component {
 
     return (
       
-      <h1>Hello world 2</h1>
+   
+      <Router>
+        <Switch>
+          <Route exact path='/' component = {HomeComponent}/>
+          <Route exact path='/userProfile' render={UserProfileComponent}/>
+          <Route exact path='/login' render={LogInComponent}/>
+          <h1>Hello world 3</h1>
+        </Switch>
+      </Router>
     );
   }
 }
