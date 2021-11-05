@@ -38,10 +38,10 @@ class App extends Component {
    
       <Router>
         <Switch>
-          <Route exact path='/' component = {HomeComponent}/>
+          <Route exact path='/Assignment_4' component = {HomeComponent}/>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LogInComponent}/>
-          <h1>Hello world 3</h1>
+          <h1>Hello world 4</h1>
         </Switch>
       </Router>
     );
