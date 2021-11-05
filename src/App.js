@@ -33,8 +33,10 @@ class App extends Component {
     const LogInComponent = () => (<LogIn user = {this.state.currentUser} mockLogIn={this.mockLogIn}/>)
 
     return (
+      
       <Router>
         <Switch>
+        <h1> hello world </h1>
           <Route component = {HomeComponent}/>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LogInComponent}/>
