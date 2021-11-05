@@ -6,41 +6,14 @@ import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
 
 class App extends Component {
-  constructor() {
-    super();
-  
-    this.state = {
-        accountBalance: 14568.27,
-        currentUser: {
-          userName: 'joe_shmo',
-          memberSince: '07/23/96',
-        }
-    }
-  }
-
-  mockLogIn = (logInInfo) => {
-    const newUser = {...this.state.currentUser}
-    newUser.userName = logInInfo.userName
-    this.setState({currentUser: newUser})
-  }
 
   render() {
 
-    const HomeComponent = () => (<Home accountBalance = {this.state.accountBalance}/>);
-    const UserProfileComponent = () => ( 
-      <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>
-      );
-    const LogInComponent = () => (<LogIn user = {this.state.currentUser} mockLogIn={this.mockLogIn}/>)
 
     return (
-      
-      <Router>
-        <Switch>
-          <Route exact path= "http://ArterioRodrigues.github.io/Assignment_4" component = {HomeComponent}/>
-          <Route exact path='/userProfile' render={UserProfileComponent}/>
-          <Route exact path='/login' render={LogInComponent}/>
-        </Switch>
-      </Router>
+      <div>
+        <h1> Hello world </h1>
+      </div>
     );
   }
 }
