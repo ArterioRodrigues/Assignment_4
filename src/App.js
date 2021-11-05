@@ -34,14 +34,9 @@ class App extends Component {
 
     return (
       
-      <Router>
-        <Switch>
-        <h1> hello world </h1>
-          <Route component = {HomeComponent}/>
-          <Route exact path='/userProfile' render={UserProfileComponent}/>
-          <Route exact path='/login' render={LogInComponent}/>
-        </Switch>
-      </Router>
+      
+          <h1> hello world  dsfa ds fsda fs</h1>
+          
     );
   }
 }
