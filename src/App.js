@@ -1,10 +1,11 @@
 import './App.css';
 import React, {Component} from 'react';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
-import {Link} from 'react-router-dom';
 import Home from './components/Home'
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
+import Debit from './components/Debit';
+
 
 class App extends Component {
   constructor() {
@@ -31,8 +32,10 @@ class App extends Component {
     const UserProfileComponent = () => ( 
       <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>
       );
-    const LogInComponent = () => (<LogIn user = {this.state.currentUser} mockLogIn={this.mockLogIn}/>)
-
+    const LogInComponent = () => (<LogIn user = {this.state.currentUser} mockLogIn={this.mockLogIn}/>);
+    const DebitComponent = () => (
+      <Debit  userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>
+      );
     return (
       
    
@@ -41,7 +44,7 @@ class App extends Component {
           <Route exact path='/Assignment_4' component = {HomeComponent}/>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LogInComponent}/>
-          <h1>Hello world 4</h1>
+          <Route exact path='/debit' render ={DebitComponent} />
         </Switch>
       </Router>
     );
