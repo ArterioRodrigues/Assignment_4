@@ -68,10 +68,13 @@ class Debit extends Component{
             }
 
             this.setState({
-                apiData: this.state.apiData.concat(api_new), 
+                apiData: [api_new].concat(this.state.apiData), 
                 new_ids: this.state.new_ids+1, 
                 total_debit: this.state.total_debit + parseInt(document.getElementById('myInput_2').value)
-            })    
+            }) 
+            
+            document.getElementById('myInput_1').value = '' 
+            document.getElementById('myInput_2').value = ''
         } 
     }
 
@@ -83,20 +86,31 @@ class Debit extends Component{
       
         return(
             <div class = "main">
-                <h1>Debit </h1>
-                
-                <p>total : {total_debit}</p>
-                
-                <input id = "myInput_1" type="text" placeholder="Enter Desription"/>
-                <input id = "myInput_2" type="text" placeholder="Enter amount"/>
-                <button onClick={this.handleSearchClick}>Search</button>
+                <div class= "top">
+                    <div class = "nav_bar">
+                        <ul> 
+                            <li> <Link to = "/Assignment_4" class = "nav_item"> Home </Link>  </li>
+                            <li> <Link to = "/userProfile" class = "nav_item"> User Profile </Link>  </li>
+                            <li> <Link to = "/login" class = "nav_item"> User Profile </Link>  </li>
+                            <li> <Link to = "/debit" class = "nav_item"> User Profile </Link>  </li>
+                        </ul>
+                    </div>
+
+                    <p class = "total_debit"> Total : {total_debit}</p> 
 
                 
-                <div>
+
+                    <h1 class = "title">Debit </h1>
+                </div>
+                <input id = "myInput_1" class = "form__field" type="text" placeholder="Enter Desription"/>
+                <input id = "myInput_2" class = "form__field" type="text" placeholder="Enter amount"/>
+                <button onClick={this.handleSearchClick} class="btn custom_btn">Search</button>
+
+                <div class = "debit_card">
                     {apiData.map(item => 
                         <div class = "card">
+                            <img src= "https://www.pngkit.com/png/detail/359-3592939_big-money-bag-vector-big-money-icon-png.png"/>
                             <div class = "container">
-                            <img src={require("./download.png")}/>
                                 <p>amount: {item.amount}</p> 
                                 <p>description: {item.description}</p> 
                                 <p>date: {item.date}</p>
@@ -104,7 +118,7 @@ class Debit extends Component{
                         </div>
                     )}
                 </div>
-                <Link to = "/Assignment_4"> User Profile </Link>
+                
             </div>
         );
     }
