@@ -36,6 +36,9 @@ class App extends Component {
     const DebitComponent = () => (
       <Debit  userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>
       );
+    const CreditComponent = () => (
+        <Credit  userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}/>
+        );
     return (
       
    
@@ -45,6 +48,7 @@ class App extends Component {
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LogInComponent}/>
           <Route exact path='/debit' render ={DebitComponent} />
+          <Route exact path='/credit' render={CreditComponent} />
         </Switch>
       </Router>
     );
