@@ -52,11 +52,17 @@ class Credit extends Component{
             }
         }   
       }
+      {
+      e.preventDefault();
+        const description = e.target[0].value;
+        const amount = Number(e.target[1].value);
+        console.log(description, amount);
+        }
 
     handleSearchClick = () => {
         if(document.getElementById('myInput_1').value !== '' && document.getElementById('myInput_2').value !== '')
         {  
-            let date = new Date;
+            ;
             
             const api_new = { 
                 id: String(this.state.new_ids),
@@ -91,6 +97,7 @@ class Credit extends Component{
                             <li> <Link to = "/userProfile" class = "nav_item"> User Profile </Link>  </li>
                             <li> <Link to = "/login" class = "nav_item"> User Profile </Link>  </li>
                             <li> <Link to = "/debit" class = "nav_item"> User Profile </Link>  </li>
+                            <li> <Link to = "/credit" class = "nav_item"> User Profile</Link>  </li>
                         </ul>
                     </div>
 
