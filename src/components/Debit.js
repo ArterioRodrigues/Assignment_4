@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './Debit.css';
+import AccountBalance from './AccountBalance';
 
 class Debit extends Component{
     constructor(props){
@@ -97,7 +98,7 @@ class Debit extends Component{
                     </div>
 
                     <p class = "total_debit"> Total : {total_debit}</p> 
-
+                    <p> <AccountBalance accountBalance = {this.props.accountBalance}/> </p>
                 
 
                     <h1 class = "title">Debit </h1>
