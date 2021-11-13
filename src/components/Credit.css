@@ -39,7 +39,7 @@ li {
 }
 
 .nav_item:hover{
-    color: #25be28;
+    color: #b323b3;
 }
 
 .nav_bar{
@@ -67,7 +67,7 @@ li {
     margin:10px;
     display: inline-block ;
     border-radius: 2%;
-    background-color: #800080;
+    background-color: #b323b3;
     
 
 }
@@ -107,7 +107,7 @@ li {
 
 .top {
     padding-bottom: 100px;
-    background-color: #800080;
+    background-color: #b323b3;
     color:white;
 }
 
@@ -121,5 +121,5 @@ li {
 
 .btn:hover{
     background-color: black;
-    color: #800080;
+    color: #b323b3;
 }
