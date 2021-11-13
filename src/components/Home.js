@@ -10,7 +10,8 @@ class Home extends Component{
                 <h1> Bank of React </h1>
 
                 <Link to = "/userProfile"> User Profile </Link>
-                <Link to = "/debit" accountBalance = {this.props.accountBalance}> Debit</Link>
+                <Link to = "/debit"> Debit</Link>
+                <Link to = "/credit"> Credit</Link>
                 <AccountBalance accountBalance = {this.props.accountBalance}/>
 
             </div>
