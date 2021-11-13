@@ -52,17 +52,12 @@ class Credit extends Component{
             }
         }   
       }
-      {
-      e.preventDefault();
-        const description = e.target[0].value;
-        const amount = Number(e.target[1].value);
-        console.log(description, amount);
-        }
 
     handleSearchClick = () => {
         if(document.getElementById('myInput_1').value !== '' && document.getElementById('myInput_2').value !== '')
         {  
-            ;
+            const month = today.getMonth()+1
+            const date = today.getFullYear().toString()+"-" + month.toString() + "-" + today.getDate().toString();
             
             const api_new = { 
                 id: String(this.state.new_ids),
@@ -114,7 +109,7 @@ class Credit extends Component{
                 <div class = "credit_card">
                     {apiData.map(item => 
                         <div class = "card">
-                            <img src= "https://www.pngkit.com/png/detail/359-3592939_big-money-bag-vector-big-money-icon-png.png"/>
+                            <img src= "https://www.pngkit.com/png/detail/5-52430_banner-cards-vector-credit-card-credit-card-icon.png"/>
                             <div class = "container">
                                 <p>amount: {item.amount}</p> 
                                 <p>description: {item.description}</p> 
@@ -125,10 +120,9 @@ class Credit extends Component{
                 </div>
                 
             </div>
+
         );
     }
 
 }
-
-
 export default Credit;
