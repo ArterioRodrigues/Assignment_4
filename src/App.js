@@ -89,7 +89,7 @@ class App extends Component {
           <div class= "top">
 
             <div class = "links">
-              <Link to ="/"> Home </Link>
+              <Link to ="/Assignment_4"> Home </Link>
               <Link to = "/userProfile"> User Profile </Link>
               <Link to = "/login"> Login </Link>
               <Link to = "/credit"> Credit </Link>
@@ -99,7 +99,7 @@ class App extends Component {
             <div class = "accountBalance"><AccountBalance accountBalance = {this.state.accountBalance}/></div>
           </div>
 
-          <Route exact path='/' component = {HomeComponent}/>
+          <Route exact path='/Assignment_4' component = {HomeComponent}/>
           <Route exact path='/userProfile' component ={UserProfileComponent}/>
           <Route exact path='/login' component ={LogInComponent}/>
           <Route exact path='/debit' component  ={DebitsComponent} />
