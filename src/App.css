@@ -149,3 +149,20 @@ img {
   background-color: black;
   color: white;
 }
+.logIn{
+  margin:100px auto;
+  background-color: #FC5185;
+  height: 500px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.username{
+  width: 50%;
+  display: inline;
+}
+
+.password{
+  width: 50%;
+  display: inline;
+}

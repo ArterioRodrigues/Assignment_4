@@ -46,7 +46,8 @@ class App extends Component {
       creditSum = element.amount
     });
 
-    let accountBalance = creditSum - debitSum;
+    let accountBalance = parseFloat(creditSum - debitSum).toFixed(2);
+   
     this.setState({debits, credits, accountBalance, debitSum, creditSum});
   }
 
@@ -58,7 +59,7 @@ class App extends Component {
       amount: e[1],
       date: String(new Date)
     }
-    this.setState({debits: [api_new].concat(debits), id: this.state.id + 1, accountBalance: this.state.accountBalance + parseFloat(e[1])})
+    this.setState({debits: [api_new].concat(debits), id: this.state.id + 1, accountBalance:  parseFloat(this.state.accountBalance) +  parseFloat(e[1])})
   }
 
   addCredit = (e) => {
@@ -69,9 +70,14 @@ class App extends Component {
       amount: e[1],
       date: String(new Date)
     }
-    this.setState({credits: [api_new].concat(credits), id: this.state.id + 1, accountBalance: this.state.accountBalance - parseFloat(e[1])})
+    this.setState({credits: [api_new].concat(credits), id: this.state.id + 1, accountBalance:  parseFloat(this.state.accountBalance) - parseFloat(e[1])})
   }
 
+  mockLogIn = (logInInfo) => {
+    const newUser = {...this.state.currentUser}
+    newUser.userName = logInInfo.userName
+    this.setState({customUser: newUser})
+  }
 
   render() {
 
