@@ -36,3 +36,116 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  font-size: 562%;
+  text-align: center;
+}
+
+.top{
+  background-color: #3FC1C9;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color:black;
+  margin: 5%;
+}
+a:hover {
+  color: white;
+  
+}
+
+.accountBalance{
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-weight: bold;
+}
+.links {
+  display: inline-block;  
+  width: 50%;
+}
+
+.card{
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 23%;
+  margin:10px;
+  display: inline-block ;
+  border-radius: 2%;
+  background-color: #25be28;
+  
+
+}
+
+
+.card_1{
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 23%;
+  margin:10px;
+  display: inline-block ;
+  border-radius: 2%;
+  background-color: #FC5185;
+}
+.card_1:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  margin:0;
+  color: white;
+}
+
+.debit_card {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.form__field {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 100px 10px ;
+
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid;
+  display: inline;
+  
+}
+
+.form__field:focus {
+  border: 3px solid #555;
+}
+
+.btn_1{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black; /* Green */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn_1:hover{
+  background-color: black;
+  color: white;
+}
